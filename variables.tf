@@ -55,19 +55,20 @@ variable "azure_account_name" {
   default = "azure-account"
 }
 
-variable "azure_subscription_id" {
-}
+#variable "azure_subscription_id" {
+#}
 
-variable "azure_client_id" {
-}
+#variable "azure_client_id" {
+#}
 
-variable "azure_client_secret" {
-}
+#variable "azure_client_secret" {
+#}
 
-variable "azure_tenant_id" {
-}
+#variable "azure_tenant_id" {
+#}
 
-variable "azure_spoke_instance_size" {
+
+ariable "azure_spoke_instance_size" {
   default = "Standard_B1ms"
 }
 
