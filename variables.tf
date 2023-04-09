@@ -68,7 +68,7 @@ variable "azure_account_name" {
 #}
 
 
-ariable "azure_spoke_instance_size" {
+variable "azure_spoke_instance_size" {
   default = "Standard_B1ms"
 }
 
