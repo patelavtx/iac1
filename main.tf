@@ -1,5 +1,4 @@
 // ACE-IAC Core Aviatrix Infrastructure
-/*
 # Private Key creation
 resource "tls_private_key" "avtx_key" {
   algorithm = "RSA"
@@ -86,4 +85,3 @@ resource "aviatrix_segmentation_network_domain" "BU2" {
 #} 
 
 
-*/
