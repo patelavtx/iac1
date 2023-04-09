@@ -11,7 +11,7 @@ resource "aws_key_pair" "ace_key" {
   key_name   = var.ace_ec2_key_name
   public_key = tls_private_key.avtx_key.public_key_openssh
 }
-
+/*
 # Create an Aviatrix Azure Account
 resource "aviatrix_account" "azure_account" {
   account_name        = var.azure_account_name
@@ -21,7 +21,7 @@ resource "aviatrix_account" "azure_account" {
   arm_application_id  = var.azure_client_id
   arm_application_key = var.azure_client_secret
 }
-
+*/
 # AWS Transit Modules
 module "aws_transit_1" {
   source              = "terraform-aviatrix-modules/mc-transit/aviatrix"
@@ -55,7 +55,7 @@ module "azure_spoke_2" {
   source          = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   version         = "1.5.0"
   cloud           = "Azure"
-  account         = aviatrix_account.azure_account.account_name
+  account         = var.azure_account_name
   region          = var.azure_spoke2_region
   name            = var.azure_spoke2_name
   cidr            = var.azure_spoke2_cidr
